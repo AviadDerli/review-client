@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [isLogged, setIsLogged] = useState(false)
-  const [role, setRole] = useState("") // admin, user , guest
+  // const [role, setRole] = useState("") // admin, user , guest
   const nav = useNavigate()
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function App() {
           <Route path='/errors' element={<ErrorsPage />} />
           <Route path='*' element={<HomePage />} />
 
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<Login isLogged={isLogged} setIsLogged={setIsLogged} />} />
           {/* משימה ב : ליצור זמנית סטייט שבודק האם היוזר מאושר */}
         </Routes>
 
