@@ -13,6 +13,9 @@ function App() {
   const nav = useNavigate()
 
   useEffect(() => {
+    // בדיקה האם isLogged?
+    // האם יש token ?
+    // אם כן >> valid (server)
     !isLogged && nav('/login')
   }, [])
   return (
